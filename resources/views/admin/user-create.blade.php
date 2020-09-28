@@ -10,7 +10,6 @@
             <li>
                 <a href="{{ route('users.index') }}">{{__('users.userinfor')}}</a>
             </li>
-
         </ol>
     </div>
     <div class="col-lg-2">
