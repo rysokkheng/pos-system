@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf01b2e5-c75c-4ca4-b1f1-2a0428a5a047" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/UserCover.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/UserCover.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user-create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/role-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/role-create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601265758598</updated>
       <workItem from="1601265760259" duration="183000" />
-      <workItem from="1601265944441" duration="10901000" />
+      <workItem from="1601265944441" duration="12015000" />
     </task>
     <servers />
   </component>
