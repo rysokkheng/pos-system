@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Language custome 
+    | Language custome
     |--------------------------------------------------------------------------
     |
     | The following language lines are the default lines which match reasons
@@ -12,7 +12,7 @@ return [
     | has failed, such as for an invalid token or invalid new password.
     |
     */
-    'usersall' => 'Users All ',
+    'usersall' => 'Users All',
     'users' => 'Users',
     'userlist' => 'List',
     'no' => 'No.',
@@ -27,7 +27,7 @@ return [
     'createdate' => 'Create Date',
     'roles' => 'Roles',
     'action'  => 'Action',
-    'createusers'  => 'Create New Users',
+    'createusers'  => 'Add User',
 
 
     'formcreateuser' => 'Create New Users',
@@ -38,9 +38,9 @@ return [
     'userroles' => 'Users Role ',
     'cancel' => 'Cancel',
     'save' => 'Save',
-   
 
 
-    
+
+
 
 ];

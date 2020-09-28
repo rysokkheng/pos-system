@@ -31,11 +31,11 @@
 @endif
 
     <div class="wrapper wrapper-content animated fadeInRight">
-          
+
             <div class="row">
             <div class="col-lg-12">
             <div class="ibox float-e-margins">
-           
+
             <div class="ibox-content">
                  <div class="pull-rigth">
                      @can('user-create')
@@ -44,7 +44,7 @@
                     </a></P>
                     @endcan
                 </div>
- 
+
             <table class="table table-striped table-bordered table-hover " id="editable"  style="font-size: 13px;">
             <thead>
             <tr>
@@ -72,7 +72,7 @@
                   @else
                   <td><img src="{{asset("images/none-bg.png")}}" class="img-circle" width="30" height="30"> </td>
               @endif
-                <td class="center">{{$use->created_at}}</td>
+                <td class="center">{{date('y-m-d', strtotime($use->created_at))}}</td>
                 <td class="center">
                  @if(!empty($use->getRoleNames()))
                     @foreach($use->getRoleNames() as $v)
@@ -98,11 +98,11 @@
                 </td>
             </tr>
               @endforeach
-          
-            
+
+
 
             </tbody>
-            
+
             </table>
 
             </div>

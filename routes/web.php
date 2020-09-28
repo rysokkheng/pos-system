@@ -25,7 +25,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::group(['prefix' => '/','where' => ['locale' => '[a-zA-Z]{2}'],'middleware' => ['auth']], function() {
 	Route::get('dashboard',[ 'as' => 'dashboard.index','uses' =>'HomeController@index']);
-  
+
 });
 Route::group(['prefix' => 'admin','where' => ['locale' => '[a-zA-Z]{2}'],'middleware' => ['auth']], function() {
 	Route::get('users.html',[ 'as' => 'users.index','uses' =>'UserController@index']);

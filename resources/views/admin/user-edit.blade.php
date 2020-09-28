@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <link href="{{ asset('assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet') }}"> 
+    <link href="{{ asset('assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet') }}">
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
@@ -10,14 +10,14 @@
             <li>
                 <a href="{{ route('users.index') }}">{{__('users.userinfor')}}</a>
             </li>
-            
+
         </ol>
     </div>
     <div class="col-lg-2">
     </div>
 </div>
 
-<div class="wrapper wrapper-content animated fadeInRight">       
+<div class="wrapper wrapper-content animated fadeInRight">
    <div class="row">
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
@@ -25,15 +25,41 @@
                     <div class="form-horizontal">
                 {!! Form::model($user, ['method' => 'PATCH','enctype' => 'multipart/form-data','route' => ['users.update', $user->id]]) !!}
 
-
                         <div class="form-group">
+                            <label class="col-sm-1 control-label">{{__('users.fullname')}}</label>
+                            <div class="col-sm-5">
+                                {!! Form::text('name', null, array('class' => 'form-control','required'=>'required','autocomplete'=>'off')) !!}
+                            </div>
                             <label class="col-sm-1 control-label">{{__('users.username')}}</label>
                             <div class="col-sm-5">
-                                 {!! Form::text('name', null, array('class' => 'form-control','required'=>'required','autocomplete'=>'off')) !!}
+                                {!! Form::text('username', null, array('class' => 'form-control','required'=>'required','autocomplete'=>'off')) !!}
                             </div>
+                        </div> <br/>
+                        <div class="form-group">
                             <label class="col-sm-1 control-label">{{__('users.email')}}</label>
                             <div class="col-sm-5">
-                                 {!! Form::text('email', null, array('class' => 'form-control','required'=>'required','autocomplete'=>'off')) !!}
+                                {!! Form::text('email', null, array('class' => 'form-control','required'=>'required','autocomplete'=>'off')) !!}
+                            </div>
+                            <label class="col-sm-1 control-label">{{__('users.base')}}</label>
+                            <div class="col-sm-3">
+                                <select name="cover_id" class="form-control">
+                                    @foreach($base as $s)
+                                        <option value= " {{ $s->id }} " class="form-control" > {{$s->name_en}} </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="radio" name="gender_id" value="1"> Male
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="gender_id" value="2"> Female
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="gender_id" value="3"> Other
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <br/>

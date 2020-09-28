@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\model\Gender;
 use App\model\UserCover;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -43,7 +44,8 @@ class UserController extends Controller
     {
         $roles = Role::pluck('name','name')->all();
         $base = UserCover::all();
-        return view('admin.user-create',compact('roles','base'));
+        $gender = Gender::all();
+        return view('admin.user-create',compact('roles','base','gender'));
     }
 
 
@@ -60,7 +62,8 @@ class UserController extends Controller
             'username' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
-            'gender' => 'required',
+            'cover_id' => 'required',
+            'gender_id' => 'required',
             'roles' => 'required'
         ]);
 
@@ -107,9 +110,10 @@ class UserController extends Controller
         $user = User::find($id);
         $roles = Role::pluck('name','name')->all();
         $userRole = $user->roles->pluck('name','name')->all();
+        $base = UserCover::all();
+        $gender = Gender::all();
 
-
-        return view('admin.user-edit',compact('user','roles','userRole'));
+        return view('admin.user-edit',compact('user','roles','userRole','base','gender'));
     }
 
 
@@ -124,8 +128,11 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+            'username' => 'required',
             'email' => 'required|email|unique:users,email,'.$id,
-            'password' => 'same:confirm-password',
+            'password' => 'required|same:confirm-password',
+            'cover_id' => 'required',
+            'gender_id' => 'required',
             'roles' => 'required'
         ]);
 

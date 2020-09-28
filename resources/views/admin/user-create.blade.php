@@ -41,13 +41,23 @@
                                  {!! Form::text('email', null, array('class' => 'form-control','required'=>'required','autocomplete'=>'off')) !!}
                             </div>
                             <label class="col-sm-1 control-label">{{__('users.base')}}</label>
-                            <div class="col-sm-5">
-                                <select name="categoria" class="form-control">
-                                @foreach($base as $s)
-                                        <option value= " {{ $s->id }} " class="form-control" > {{$s->base_name}} </option>
+                            <div class="col-sm-3">
+                                <select name="cover_id" class="form-control">
+                                @foreach($base as $base_cover)
+                                        <option value= " {{ $base_cover->id }} " class="form-control" > {{App::getLocale() == 'kh' ? $base_cover->name_kh : $base_cover->name_en}} </option>
                                 @endforeach
                                 </select>
                             </div>
+                             <div class="col-sm-2">
+                                 <div class="form-group">
+                                     @foreach($gender as $gen)
+                                     <label>
+                                         <input type="radio" name="gender_id[]" value="{{$gen->gender_id}}">
+                                          {{App::getLocale() == 'kh' ? $gen->name_kh : $gen->name_en}}
+                                     </label>
+                                     @endforeach
+                                 </div>
+                             </div>
                         </div>
                         <br/>
 

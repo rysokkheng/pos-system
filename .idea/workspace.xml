@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cf01b2e5-c75c-4ca4-b1f1-2a0428a5a047" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/UserCover.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/UserCover.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user-create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601265758598</updated>
       <workItem from="1601265760259" duration="183000" />
-      <workItem from="1601265944441" duration="782000" />
+      <workItem from="1601265944441" duration="10901000" />
     </task>
     <servers />
   </component>
@@ -150,5 +160,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601265942268" />
+    <state x="2714" y="443" key="NewPhpFileDialog" timestamp="1601276558467">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2714" y="443" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601276558467" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601280578334">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601280578334" />
   </component>
 </project>
