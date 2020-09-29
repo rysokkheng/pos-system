@@ -126,6 +126,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $this->validate($request, [
             'name' => 'required',
             'username' => 'required',
@@ -150,8 +151,8 @@ class UserController extends Controller
         }
         $user = User::find($id);
         $user->update($input);
-          $user->assignRole($request->input('roles'));
         DB::table('model_has_roles')->where('model_id',$id)->delete();
+        $user->assignRole($request->input('roles'));
 
         return redirect()->route('users.index')
                         ->with('success','User updated successfully');
