@@ -135,15 +135,12 @@ class UserController extends Controller
             'gender_id' => 'required',
             'roles' => 'required'
         ]);
-
-
         $input = $request->all();
         if(!empty($input['password'])){
             $input['password'] = Hash::make($input['password']);
         }else{
             $input = array_except($input,array('password'));
         }
-
          if($request->hasFile('profile')) {
             $file         = $request->profile;
             $timestamp    = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
@@ -151,13 +148,10 @@ class UserController extends Controller
             $input['img']  = $name;
             $file->move(public_path('/images'), $name);
         }
-
-
         $user = User::find($id);
         $user->update($input);
           $user->assignRole($request->input('roles'));
         DB::table('model_has_roles')->where('model_id',$id)->delete();
-
 
         return redirect()->route('users.index')
                         ->with('success','User updated successfully');

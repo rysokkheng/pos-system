@@ -31,12 +31,14 @@ Route::group(['prefix' => 'admin','where' => ['locale' => '[a-zA-Z]{2}'],'middle
 	Route::get('users.html',[ 'as' => 'users.index','uses' =>'UserController@index']);
 	Route::get('users/create.html',[ 'as' => 'users.create','uses' =>'UserController@create']);
 	Route::POST('users/store.html',['as'=>'users.store','uses'=>'UserController@store']);
-	Route::GET('users/edit/{id}',['as'=>'users.edit','uses'=>'UserController@edit']);
-	Route::POST('users/update/{id}',['as'=>'users.update','uses'=>'UserController@update']);
+	Route::GET('users/{id}/edit.html',['as'=>'users.edit','uses'=>'UserController@edit']);
+	Route::PUT('users/update/{id}',['as'=>'users.update','uses'=>'UserController@update']);
 	Route::GET('users/destroy/{id}',['as'=>'users.destroy','uses'=>'UserController@destroy']);
 
     Route::get('roles.html',[ 'as' => 'roles.index','uses' =>'RoleController@index']);
     Route::get('roles/create.html',[ 'as' => 'roles.create','uses' =>'RoleController@create']);
     Route::POST('roles/store.html',['as'=>'roles.store','uses'=>'RoleController@store']);
+    Route::GET('roles/{id}/edit.html',['as'=>'roles.edit','uses'=>'RoleController@edit']);
+    Route::PUT('roles/update/{id}',['as'=>'roles.update','uses'=>'RoleController@update']);
 
 });

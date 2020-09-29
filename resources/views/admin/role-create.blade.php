@@ -90,7 +90,7 @@
 
                          <div class="form-group">
                             <div class="col-sm-4 col-sm-offset-2">
-                                <button class="btn btn-white" type="submit">Cancel</button>
+                               <a class="btn btn-danger" role="button" href="{{ route('roles.index') }}">Back</a>
                                 <button class="btn btn-primary" type="submit">Save</button>
                             </div>
                         </div>

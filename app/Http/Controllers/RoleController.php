@@ -1,11 +1,8 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use DB;
@@ -105,8 +102,7 @@ class RoleController extends Controller
             ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
             ->all();
 
-
-        return view('roles.edit',compact('role','permission','rolePermissions'));
+        return view('admin.role-edit',compact('role','permission','rolePermissions'));
     }
 
 
@@ -123,16 +119,11 @@ class RoleController extends Controller
             'name' => 'required',
             'permission' => 'required',
         ]);
-
-
         $role = Role::find($id);
         $role->name = $request->input('name');
         $role->save();
 
-
         $role->syncPermissions($request->input('permission'));
-
-
         return redirect()->route('roles.index')
                         ->with('success','Role updated successfully');
     }

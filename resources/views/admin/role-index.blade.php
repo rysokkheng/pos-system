@@ -18,7 +18,7 @@
     <div class="col-lg-10">
         <h2>{{__('roles.roleall')}}</h2>
         <ol class="breadcrumb">
-      
+
             <li>
                 <a href="{{ route('roles.index') }}">{{__('roles.roles')}}</a>
             </li>
@@ -39,9 +39,9 @@
 @endif
 
 
-<div class="wrapper wrapper-content animated fadeInRight">       
+<div class="wrapper wrapper-content animated fadeInRight">
  <div class="row">
-    
+
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-content">
@@ -69,7 +69,7 @@
                 <td class="center">{{$rol->name}}</td>
                 <td class="center">
                 @can('role-edit')
-                <a href="" class="btn btn-success btn-sm"> <span><i class="fa fa-pencil"></i></span></a>
+                <a href="{{ route('roles.edit',$rol->id) }}" class="btn btn-success btn-sm"> <span><i class="fa fa-pencil"></i></span></a>
                 @endcan
 
                 <a href="" class="btn btn-warning btn-sm"><span><i class="fa fa-archive"></i></span></a>
@@ -80,11 +80,11 @@
                 </td>
             </tr>
             @endforeach
-          
 
-          
+
+
             </tbody>
-            
+
             </table>
 
             </div>

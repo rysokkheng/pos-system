@@ -23,8 +23,8 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-content">
                     <div class="form-horizontal">
-                {!! Form::model($user, ['method' => 'PATCH','enctype' => 'multipart/form-data','route' => ['users.update', $user->id]]) !!}
-
+                {!! Form::model($user, ['method' => 'PUT','enctype' => 'multipart/form-data','route' => ['users.update', $user->id]]) !!}
+                        @csrf
                         <div class="form-group">
                             <label class="col-sm-1 control-label">{{__('users.fullname')}}</label>
                             <div class="col-sm-5">
