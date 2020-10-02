@@ -18,6 +18,7 @@ Route::get('dashboard/{locale}', function ($locale){
 });
 
 Auth::routes();
+Route::get('/',[ 'as' => 'login','uses' =>'LoginController@index']);
 Route::get('login',[ 'as' => 'login','uses' =>'LoginController@index']);
 Route::post('authenticate',[ 'as' => 'authenticate','uses' =>'LoginController@authenticate']);
 Route::get('logout',[ 'as' => 'logout','uses' =>'LoginController@logout']);
